@@ -1,0 +1,9 @@
+1. Poženem volume2sparse.py
+2. Poženem colmap database_creator --database_path <projekt>/database.db
+3. colmap feature_extractor --database_path ./test/database.db --image_path test/images/
+4. colmap exhaustive_matcher --database_path test/database.db
+5. mkdir test/triangulated
+6. colmap point_triangulator --database_path test/database.db --image_path test/images/ --input_path test/sparse --output_path test/sparse
+7. colmap image_undistorter --image_path test/images --input_path test/sparse/0 --output_path test/dense
+8. colmap patch_match_stereo --workspace_path test/dense
+9. colmap stereo_fusion --workspace_path test/dense/ --output_path test/dense/fused.ply

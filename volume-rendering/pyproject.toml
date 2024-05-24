@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "volume-rendering"
+version = "0.1.0"
+description = ""
+authors = ["Gorazd Gorup <gorupgorazd@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typed-argument-parser = "^1.10.0"
+numpy = "^1.26.4"
+pillow = "^10.3.0"
+matplotlib = "^3.8.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
